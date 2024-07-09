@@ -295,9 +295,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Column(
                       children: [
@@ -310,10 +311,103 @@ class _MyHomePageState extends State<MyHomePage> {
                         )
                       ],
                     ),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        
+                        Row(
+                          children: [
+                            Text(
+                              "jet.sada_",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              "2 hrs ago.",
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Icon(
+                          FontAwesomeIcons.moon,
+                          color: Colors.yellow,
+                          size: 20,
+                        ),
                       ],
+                    )
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.fromLTRB(50, 10, 0, 0),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: const Color.fromARGB(
+                              255, 51, 51, 51), // Set the border color
+                          width: 2.0,
+                        ), // Set the border width
+                      ),
+                      child: Column(
+                        children: [
+                          Image.network(
+                            "https://cdn.discordapp.com/attachments/1026400262631477280/1260294209219330109/PXL_20240709_225545931.NIGHT.jpg?ex=668ecbf2&is=668d7a72&hm=5a4904500fe8b448a5018a28c7d2f4fc32ab117092d249b24927d5e19470eb7d&",
+                            width: 320,
+                            height: 250,
+                            fit: BoxFit.cover,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.fromLTRB(50, 15, 0, 0),
+                      child: const Row(
+                        children: [
+                          Icon(
+                            FontAwesomeIcons.heart,
+                            color: Colors.white,
+                            size: 23,
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Icon(
+                            FontAwesomeIcons.message,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Icon(
+                            FontAwesomeIcons.retweet,
+                            color: Colors.white,
+                            size: 23,
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Icon(
+                            FontAwesomeIcons.arrowRight,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                        ],
+                      ),
                     )
                   ],
                 )
