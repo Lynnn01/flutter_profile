@@ -52,7 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
               horizontal: 10,
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -173,7 +172,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: const EdgeInsets.fromLTRB(50, 2, 50, 2),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.grey, // Set the border color
+                          color: Color.fromARGB(
+                              255, 77, 77, 77), // Set the border color
                           width: 2.0, // Set the border width
                         ),
                         borderRadius: BorderRadius.circular(
@@ -199,7 +199,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: const EdgeInsets.fromLTRB(40, 2, 40, 2),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.grey, // Set the border color
+                          color: const Color.fromARGB(
+                              255, 77, 77, 77), // Set the border color
                           width: 2.0, // Set the border width
                         ),
                         borderRadius: BorderRadius.circular(
@@ -255,7 +256,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       decoration: const BoxDecoration(
                         border: Border(
                             bottom: BorderSide(
-                          color: Colors.grey, // Set the border color
+                          color: Color.fromARGB(
+                              255, 77, 77, 77), // Set the border color
                           width: 2.0,
                         )
                             // Set the border width
@@ -276,7 +278,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       decoration: const BoxDecoration(
                         border: Border(
                             bottom: BorderSide(
-                          color: Colors.grey, // Set the border color
+                          color: Color.fromARGB(
+                              255, 77, 77, 77), // Set the border color
                           width: 2.0,
                         )
                             // Set the border width
@@ -408,6 +411,16 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ],
                       ),
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Column(
+                  children: [
+                    Divider(
+                      color: Color.fromARGB(255, 77, 77, 77),
                     )
                   ],
                 )
