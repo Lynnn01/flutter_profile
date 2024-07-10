@@ -3,11 +3,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
+import 'package:flutter_profile/about.dart';
 // ignore: unused_import
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // ignore: duplicate_import, unused_import
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
+// ignore: unused_import
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -172,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: const EdgeInsets.fromLTRB(50, 2, 50, 2),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: Color.fromARGB(
+                          color: const Color.fromARGB(
                               255, 77, 77, 77), // Set the border color
                           width: 2.0, // Set the border width
                         ),
@@ -415,14 +418,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 const SizedBox(
-                  height: 15,
+                  height: 10,
                 ),
-                const Column(
-                  children: [
-                    Divider(
-                      color: Color.fromARGB(255, 77, 77, 77),
-                    )
-                  ],
+                // const Column(
+                //   children: [
+                //     Divider(
+                //       color: Color.fromARGB(255, 77, 77, 77),
+                //     )
+                //   ],
+                // ),
+                ElevatedButton(
+                  onPressed: () {
+                    Get.to(const AboutPage());
+                  },
+                  child: const Text("test"),
                 )
               ],
             ),
